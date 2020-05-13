@@ -135,27 +135,6 @@ public class AgnosticFileReaderTest {
     }
 
     @Nested
-    class AgnosticParquetFileReaderTest extends ParquetFileReaderTest {
-
-        @Override
-        protected Map<String, Object> getReaderConfig() {
-            Map<String, Object> config = super.getReaderConfig();
-            config.put(AgnosticFileReader.FILE_READER_AGNOSTIC_EXTENSIONS_PARQUET, getFileExtension());
-            return config;
-        }
-
-        @Override
-        public Class<? extends FileReader> getReaderClass() {
-            return AgnosticFileReader.class;
-        }
-
-        @Override
-        public String getFileExtension() {
-            return FILE_EXTENSION;
-        }
-    }
-
-    @Nested
     class AgnosticSequenceFileReaderTest extends SequenceFileReaderTest {
 
         @Override

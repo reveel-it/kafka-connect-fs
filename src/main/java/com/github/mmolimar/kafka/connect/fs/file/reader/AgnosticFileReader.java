@@ -49,7 +49,7 @@ public class AgnosticFileReader extends AbstractFileReader<AgnosticFileReader.Ag
 
         Class<? extends AbstractFileReader> clz;
         if (parquetExtensions.contains(extension)) {
-            clz = ParquetFileReader.class;
+            clz = TextFileReader.class;
         } else if (avroExtensions.contains(extension)) {
             clz = AvroFileReader.class;
         } else if (sequenceExtensions.contains(extension)) {
